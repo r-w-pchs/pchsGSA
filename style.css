@@ -1,0 +1,122 @@
+body,html{
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.parallaxed{
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.headerImage{
+    background-image: url("https://images.ctfassets.net/3d1gqlus774s/RcO3UE4MuqcWCkqCOQUc6/92e42d1044415c4de531633b2107468a/pride--homepage--hero.jpg"); 
+    min-height: 100%;
+    background-size: cover;
+}
+
+.bgimg1{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8d/LGBT_Pride_Flags.png");
+    background-size: contain;
+    min-height: 50%;
+}
+    
+.caption{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #111;
+}
+
+.subCaption{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: #111;
+}
+
+.caption span.border,.subCaption span.border{
+    background-color: #111;
+    color: #ff0;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.midPageInfo{
+    color: #777;
+    background-color:#FFFFFF;
+    text-align:center;
+    padding:10px 10%;
+    text-align: justify;
+    border-style: solid;
+    border-color: #aaa;
+}
+
+h3{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+    padding: 10px;
+    background-color: #ededed;
+}
+
+.contactInfo{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-90%,-50%);
+    z-index: 1;
+    background-color: white;
+    padding: 10px 10%;
+}
+
+.scrollFromSide{
+    animation-name: scrollOn;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeInAndUp{
+    animation-name: InAndUpAnim;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    opacity: 0%;
+}
+
+#imageLinks{
+    display:flex;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 1;
+}
+
+#imageLinks img{
+    height: 60px;
+}
+
+@keyframes InAndUpAnim{
+    from {transform: translateY(-200%);}
+    to {transform: translateY(0%);opacity: 100%;}
+}
+
+@keyframes scrollOn{
+    from {transform:translate(-90%, -50%);}
+    to {transform:translate(0%, -50%);}
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallaxed {
+        background-attachment: scroll;
+    }
+}
